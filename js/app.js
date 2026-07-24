@@ -2,8 +2,7 @@ alert("APP.JS CARREGADO");
 
 const botao = document.getElementById("btnProdutos");
 
-const resultado = document.getElementById("resultado");
-
+alert(botao);
 
 botao.addEventListener("click", function(){
 
@@ -11,17 +10,15 @@ botao.addEventListener("click", function(){
 
     .then(response => response.json())
 
-    .then(produtos => {
+    .then(data => {
 
-        console.log(produtos);
-
-        resultado.innerHTML = JSON.stringify(produtos, null, 2);
+        console.log(data);
 
     })
 
     .catch(error => {
 
-        console.log("Erro ao consultar API:", error);
+        console.log("Erro:", error);
 
     });
 
