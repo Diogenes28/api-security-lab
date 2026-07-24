@@ -6,6 +6,6 @@ alert(botao);
 
 botao.addEventListener("click", function(){
 
-    alert("Botão funcionando!");
+    fetch("https://api.exemplo.com/produtos")
 
 });
